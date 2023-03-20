@@ -24,8 +24,9 @@ function attemptIsValid(attempt) {
     document.body.innerHTML = `
       <h2>Congratulations!</h2>
       <h3>The secret number was ${secretNumber}.</h3>
+
+      <button id="play-again" class="btn-play">Play Again!</button>
     `;
-    return;
     
   } else if (number > secretNumber) {
     attemptElement.innerHTML += `
@@ -50,4 +51,8 @@ function numberGreaterOrLessThanAllowedValue(number) {
   return number > maxValue || number < minValue;
 }
 
-
+document.body.addEventListener('click', event => {
+  if(event.target.id == 'play-again') {
+    window.location.reload();
+  }
+});
