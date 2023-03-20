@@ -11,8 +11,8 @@ recognition.addEventListener('result', onSpeak);
 
 function onSpeak(event) {
   const attempt = event.results[0][0].transcript;
-  console.log(event);
   showAttemptOnScreen(attempt);
+  attemptIsValid(attempt);
 }
 
 function showAttemptOnScreen(attempt) {
@@ -21,3 +21,5 @@ function showAttemptOnScreen(attempt) {
     <span class="box">${attempt}</span>
   `
 }
+
+recognition.addEventListener('end', () => recognition.start());
