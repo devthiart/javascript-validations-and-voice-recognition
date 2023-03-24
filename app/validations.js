@@ -29,10 +29,12 @@ function attemptIsValid(attempt) {
     `;
     
   } else if (number > secretNumber) {
+    lostLive();
     attemptElement.innerHTML += `
       <div>The secret number is less <i class="fa-solid fa-arrow-down-long"></i></div>
     `;
   } else {
+    lostLive();
     attemptElement.innerHTML += `
       <div>The secret number is greater <i class="fa-solid fa-arrow-up-long"></i></div>
     `;
@@ -51,6 +53,7 @@ function numberGreaterOrLessThanAllowedValue(number) {
   return number > maxValue || number < minValue;
 }
 
+// Reload Game
 document.body.addEventListener('click', event => {
   if(event.target.id == 'play-again') {
     window.location.reload();

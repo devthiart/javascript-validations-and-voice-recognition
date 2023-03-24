@@ -4,6 +4,7 @@
   --font-family: 'Montserrat', sans-serif;
   --bg-color: #0AA1DD;
   --primary-color: #E8F9FD;
+  --game-over-color: #ffa6a6;
 }
 
 body {
@@ -30,6 +31,15 @@ h2 {
 h3 {
   font-size: 3rem;
   margin-top: 20px;
+}
+
+.live-numbers {
+  font-size: 4rem;
+  padding-bottom: 2rem;
+}
+
+.live-numbers i {
+  padding: 0.25rem;
 }
 
 .message { 
@@ -61,4 +71,12 @@ h3 {
   background-color: var(--primary-color);
   color: var(--bg-color);
   cursor: pointer;
+}
+
+.game-over {
+  background-color: var(--game-over-color);
+}
+
+.game-over .btn-play {
+  background-color: var(--game-over-color);
 }

@@ -4,7 +4,7 @@ window.SpeechRecognition = window.SpeechRecognition || webkitSpeechRecognition;
 
 const recognition = new SpeechRecognition();
 
-recognition.lang = 'pt-Br';
+recognition.lang = 'en'; // 'pt-Br';
 recognition.start();
 
 recognition.addEventListener('result', onSpeak);
